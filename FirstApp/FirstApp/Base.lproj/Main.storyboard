@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Svetofor Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SvetoforController" customModule="FirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGe-ic-viN" customClass="SvetoforSectionView" customModule="FirstApp" customModuleProvider="target">
+                                <rect key="frame" x="146.66666666666666" y="75" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Fs3-HX-did"/>
+                                    <constraint firstAttribute="width" constant="100" id="g2q-ap-dZB"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKd-9U-ueD" customClass="SvetoforSectionView" customModule="FirstApp" customModuleProvider="target">
+                                <rect key="frame" x="146.66666666666666" y="219" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHT-jl-x2y" customClass="SvetoforSectionView" customModule="FirstApp" customModuleProvider="target">
+                                <rect key="frame" x="146.66666666666666" y="363" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6L-oE-aAq">
+                                <rect key="frame" x="96.666666666666686" y="613" width="200" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="blt-WA-VJ0"/>
+                                    <constraint firstAttribute="height" constant="80" id="kXw-d2-prs"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Switcher">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="turnButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yU8-55-LVS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IKd-9U-ueD" firstAttribute="width" secondItem="hGe-ic-viN" secondAttribute="width" id="1ho-x6-Led"/>
+                            <constraint firstItem="rHT-jl-x2y" firstAttribute="centerX" secondItem="hGe-ic-viN" secondAttribute="centerX" id="3tx-yW-92N"/>
+                            <constraint firstItem="IKd-9U-ueD" firstAttribute="centerX" secondItem="hGe-ic-viN" secondAttribute="centerX" id="8FO-1c-5m5"/>
+                            <constraint firstItem="rHT-jl-x2y" firstAttribute="height" secondItem="hGe-ic-viN" secondAttribute="height" id="94F-gi-tfc"/>
+                            <constraint firstItem="f6L-oE-aAq" firstAttribute="centerX" secondItem="hGe-ic-viN" secondAttribute="centerX" id="ALs-Xh-Mjd"/>
+                            <constraint firstItem="f6L-oE-aAq" firstAttribute="top" secondItem="rHT-jl-x2y" secondAttribute="bottom" constant="150" id="I7a-Bl-w6Y"/>
+                            <constraint firstItem="rHT-jl-x2y" firstAttribute="width" secondItem="hGe-ic-viN" secondAttribute="width" id="NxN-DT-h26"/>
+                            <constraint firstItem="hGe-ic-viN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="UE4-jL-pjx"/>
+                            <constraint firstItem="IKd-9U-ueD" firstAttribute="height" secondItem="hGe-ic-viN" secondAttribute="height" id="WVb-cS-Psr"/>
+                            <constraint firstItem="IKd-9U-ueD" firstAttribute="top" secondItem="hGe-ic-viN" secondAttribute="bottom" constant="44" id="c6N-CK-r7O"/>
+                            <constraint firstItem="rHT-jl-x2y" firstAttribute="top" secondItem="IKd-9U-ueD" secondAttribute="bottom" constant="44" id="cdU-Rk-DHi"/>
+                            <constraint firstItem="hGe-ic-viN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="et4-ea-Zi2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstSectionView" destination="hGe-ic-viN" id="2mK-Cv-DIv"/>
+                        <outlet property="redViewHeightConstraint" destination="Fs3-HX-did" id="2qY-Z5-W3k"/>
+                        <outlet property="secondSectionView" destination="IKd-9U-ueD" id="Lrf-MF-1SX"/>
+                        <outlet property="thirdSectionView" destination="rHT-jl-x2y" id="FiB-bs-wrw"/>
+                        <outlet property="turnButton" destination="f6L-oE-aAq" id="28I-Va-3ew"/>
+                        <outletCollection property="viewsCollection" destination="hGe-ic-viN" collectionClass="NSMutableArray" id="hcY-EZ-rFq"/>
+                        <outletCollection property="viewsCollection" destination="IKd-9U-ueD" collectionClass="NSMutableArray" id="SWF-zd-y8I"/>
+                        <outletCollection property="viewsCollection" destination="rHT-jl-x2y" collectionClass="NSMutableArray" id="kpQ-lk-I7I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25.190839694656489" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
